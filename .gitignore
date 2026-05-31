@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Secrets - NEVER commit these
+*.pem
+.env
+credentials
+
+# OS junk
+.DS_Store
+Thumbs.db
