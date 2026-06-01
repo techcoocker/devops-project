@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t techcoocker/devops-app:latest .
+        run: docker build -t chikichik/devops-app:latest .
 
       - name: Run a test
         run: echo "Running tests... (placeholder for now)"
@@ -27,9 +27,9 @@ jobs:
       - name: Security scan with Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: techcoocker/devops-app:latest
+          image-ref: chikichik/devops-app:latest
           format: table
           exit-code: 0
 
       - name: Push image to Docker Hub
-        run: docker push techcoocker/devops-app:latest
+        run: docker push chikichik/devops-app:latest
